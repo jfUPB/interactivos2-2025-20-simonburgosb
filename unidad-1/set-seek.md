@@ -37,3 +37,11 @@ Aunque en Colombia lo veo a dia de hoy complejo (tal vez en en el futuro mejore)
 
 #### Explica qué hiciste y por qué.
 Realize un cambio en la posicion del cuadro para que vaya aparciendo a medidad que el mouse se mueve en direccion vertical. 
+
+### Actividad 04
+
+### Diseño propio
+[https://editor.p5js.org/simonburgosb/sketches/53IBi6GR_]
+
+### ¿Que hice y por que?
+Este sketch dibuja un cuadrado que cambia con el mouse, un círculo que cambia de color con el tiempo, y un triángulo aleatorio cuando haces clic. Decidi hacer esto ya andaba exprimentado con funciones nuevas y ademas de como poderlas integrar todas en una sola. 
