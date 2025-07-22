@@ -14,3 +14,6 @@ Se pueden observar figuaras recatgulares, cuadradas y verticales e una esacille 
 
 Lo que podria estar haciendo el programa por detras es setear un background en negro, y con alguna funcion difumina la parte de arriba, tiene una funcion poara crear las formas rectangulares de foma randomizada en tamaño y en la posicion en X, mientras que la posicion en Y es fija pero variable segun el height del canvas. El color tambien es randomizado, y todo esto cmabia con la funcion MousePressed. 
 
+### Recreate
+
+[https://editor.p5js.org/simonburgosb/sketches/kQUpGOm0l]
