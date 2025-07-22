@@ -17,3 +17,7 @@ Lo que podria estar haciendo el programa por detras es setear un background en n
 ### Recreate
 
 [https://editor.p5js.org/simonburgosb/sketches/kQUpGOm0l]
+
+### Explore 
+1. 
+[https://editor.p5js.org/simonburgosb/sketches/SR8QW5SSk]
