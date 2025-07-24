@@ -55,3 +55,12 @@ Realmente el uncio recurso que utilice en esta unidad fue las referencias del pr
 #### Dejar de hacer: ¿Hubo algún referente, lectura o parte de la clase que te pareció menos relevante, confusa o que podríamos omitir para enfocarnos en otras cosas?
 
 Realemnet no, todas me parecieron utilies
+
+#### Empezar a hacer: ¿Qué te gustaría que hiciéramos en las próximas unidades? ¿Más teoría, más ejemplos de artistas específicos, más desafíos de codificación desde cero, más tiempo para experimentar?
+
+Me gusta un poco mas de teoria y mas tiempo para experimentar. 
+
+#### Método de aprendizaje: ¿Cómo te sentiste al usar el método Deconstrucción/Reconstrucción? ¿Te gustaría que siguiéramos usando este enfoque tan estructurado para aprender nuevos conceptos técnicos? ¿Por qué?
+
+D¿Fue algo nuevo de utilizar y estuvo muy bacano, este efonque esta perfecto patra seguri usandolo. 
+
