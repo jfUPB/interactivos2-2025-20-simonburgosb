@@ -25,10 +25,13 @@ El programa genera una composición visual de rectángulos aleatorios organizado
 
 Aqui lo que hice fue cambiar la orientacion de horizontal (como estaba antes) a una orientacion vertical, y defini una transparencia unica. Esto con el obetivo de cambiar la dispocion visual sin mutar radicalmente el proyecto. 
 
-![./act5.png]
+![](./act5.png)
 
 ### Tinker
 [https://editor.p5js.org/simonburgosb/sketches/h0CQPLdKK]
 
 Añadí rotate(random(TWO_PI)) dentro de un push()/pop() para que cada rectángulo esté en un ángulo aleatorio.
 Por qué: Esto "mutó" radicalmente el comportamiento visual original, que era ordenado y vertical. Ahora los rectángulos se ven desordenados, rotados y más expresivos, pero el código principal sigue intacto.
+
+![](./act51.png)
+
