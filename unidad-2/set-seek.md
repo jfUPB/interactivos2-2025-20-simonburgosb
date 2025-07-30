@@ -19,7 +19,7 @@ El unicio output que visualizo es la pantalla princiapl del escenario donde se r
 ### Actividad 02
 
 #### Mapa
-
+![](./act2.png)
 
 #### ¿Qué elemento del diseño te parece más innovador y por qué?
 Lo más innovador es la transformación semántico-visual de las palabras del público en la Fase III. No solo se trata de una visualización pasiva, sino de una reinterpretación artística emocional en tiempo real, donde el público se ve reflejado. Esta interacción transforma el espectador en co-creador y canaliza emociones como “miedo” o “soledad” en símbolos de esperanza y belleza.
