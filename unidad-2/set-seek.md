@@ -26,3 +26,16 @@ Lo más innovador es la transformación semántico-visual de las palabras del p�
 
 #### ¿Cómo crees que la experiencia del público cambiaría si uno de los inputs —por ejemplo, las palabras del público— fuera eliminado?
 Si se eliminara ese input, la dimensión participativa y emocional del cierre se debilitaría enormemente. La Fase III dejaría de ser una catarsis colectiva para volverse únicamente contemplativa. El público ya no vería sus propias emociones reflejadas ni transformadas, lo que podría romper el arco emocional del performance. La narrativa pasaría de ser compartida a ser exclusivamente del artista, perdiendo poder simbólico.
+
+### Actividad 03
+
+#### Explica con tus propias palabras la diferencia entre un “evento” en una película tradicional y un “nodo generativo” en la experiencia de “Prometeo”.
+
+Un evento en un pelicula tradional es algo lineal que aunque uno esta experimentando la pelicula por primera vez uno puede ir intullendo su final, y hasta su desarrollo mismo; obviamente despues de verla la primera vez ya se sabe de memoria su final y desarrollo. Mientras que en prometeo nadie, ni siquiera el mismo artista o creador, sabra que va a pasar ya que estas cambian de forma constante ademas de que se influencia con el publico para volverse aun mas unicas. 
+
+#### ¿Quién crees que tiene más “poder” o “agencia” en la creación de la experiencia final de “Prometeo”: el artista, el público o los diseñadores del sistema? Justifica tu respuesta.
+Realmente el artista y el publico ya que el diseñador pone su conocimienta pra que el arte se genere pero ni el puede asegurara a ciencia cierta lo que se va a generar. El artista mientras tanto puede influenciar un poco mas que el publico ya que el es la base de la generacion. 
+
+#### El documento dice que el objetivo es generar “EPIFANÍAS” en lugar de “empatía”. ¿Qué crees que significa esto en el contexto de una experiencia inmersiva?
+
+Una epifanía no es solo entender o compartir una emoción (como ocurre con la empatía), sino vivir un momento de revelación personal, una comprensión y transformacion que cambia tu forma de ver el mundo, a ti mismo o la situación.
