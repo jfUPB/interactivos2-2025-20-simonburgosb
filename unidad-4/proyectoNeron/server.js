@@ -65,9 +65,10 @@ io.on('connection', (socket) => {
 server.listen(port, () => {
     console.log(`Server is listening on http://localhost:${port}`);
     console.log('Rutas disponibles:');
-    console.log(`- Desktop: http://localhost:${port}/desktop`);
-    console.log(`- Mobile 1: http://localhost:${port}/mobile`);
-    console.log(`- Mobile 2: http://localhost:${port}/mobile2`);
-    console.log(`- Control Remoto: http://localhost:${port}/controlRemoto`);
+    console.log(`- Desktop: http://localhost:${port}/Cliented1`);
+    console.log(`- Mobile 1: http://localhost:${port}/Clientem1`);
+    console.log(`- Mobile 2: http://localhost:${port}/Clientem2`);
+    console.log(`- Control Remoto: http://localhost:${port}/remoto`);
     console.log(`- Visuales: http://localhost:${port}/visuales`);
+
 });
