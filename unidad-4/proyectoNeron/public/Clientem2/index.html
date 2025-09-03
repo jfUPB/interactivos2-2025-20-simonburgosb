@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Móvil 2</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+</head>
+<body>
+    <!-- Estado 1: Control Manual -->
+    <div class="contenedor estado1">
+        <h1>Control Manual</h1>
+        <div id="controlsEstado1">
+            <div class="slider-container">
+                <label for="brillo">Brillo</label>
+                <input type="range" id="brillo" min="0" max="100" value="50">
+                <div class="valor-display">
+                    <span id="valorBrillo">50</span>
+                </div>
+                <div class="parameter-info">
+                    Ajusta el nivel de brillo
+                </div>
+            </div>
+
+            <div class="slider-container">
+                <label for="frecuencia">Frecuencia</label>
+                <input type="range" id="frecuencia" min="1" max="20" value="10">
+                <div class="valor-display">
+                    <span id="valorFrecuencia">10</span>
+                </div>
+                <div class="parameter-info">
+                    Ajusta la velocidad de cambio
+                </div>
+            </div>
+
+            <button id="enviar">Enviar Datos</button>
+            <div class="status-message" id="lastSentMessage">
+                Último envío: <span id="lastSentTime">-</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Estado 2: Control de Movimiento -->
+    <div class="contenedor estado2">
+        <h1>Control de Movimiento</h1>
+        <div id="orientationDisplay">
+            <div class="orientation-circle">
+                <div class="orientation-marker"></div>
+            </div>
+            <div class="orientation-data">
+                <div class="sensor-value">
+                    <span class="label">Beta (X):</span>
+                    <span id="rotationX">0.0°</span>
+                </div>
+                <div class="sensor-value">
+                    <span class="label">Gamma (Y):</span>
+                    <span id="rotationY">0.0°</span>
+                </div>
+            </div>
+            <div class="status-message" id="orientationStatus">
+                Última actualización: <span id="orientationUpdateTime">-</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Estado 3: Control de Volumen -->
+    <div class="contenedor estado3">
+        <h1>Control de Volumen</h1>
+        <div id="audioDisplay">
+            <div class="slider-container">
+                <label for="volumen">Volumen</label>
+                <input type="range" id="volumen" min="0" max="100" value="50">
+                <div class="valor-display">
+                    <span id="valorVolumen">50</span>
+                </div>
+                <div class="parameter-info">
+                    Ajusta el nivel de volumen
+                </div>
+            </div>
+            <div class="volume-visualizer">
+                <div class="volume-bar">
+                    <div id="volumeLevel" class="volume-level"></div>
+                </div>
+            </div>
+            <div class="status-message" id="volumeStatus">
+                Último envío: <span id="lastVolumeTime">-</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Indicadores de Estado y Conexión -->
+    <div class="status-container">
+        <div class="estado-indicator">
+            <span class="label">Estado:</span>
+            <span id="estadoActual">1</span>
+        </div>
+        <div class="conexion-indicator">
+            <span class="label">Conexión:</span>
+            <span id="connectionStatus">Desconectado</span>
+        </div>
+    </div>
+
+    <div class="device-info">
+        <span class="device-label">Móvil 2</span>
+        <div class="version-info">v1.0</div>
+    </div>
+
+    <script src="sketch.js"></script>
+</body>
+</html>

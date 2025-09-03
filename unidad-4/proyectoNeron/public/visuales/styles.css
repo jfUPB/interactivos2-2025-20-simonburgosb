@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #000000;
+    color: #ffffff;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    overflow: hidden;
+}
+
+canvas {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.info-panel {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 300px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    padding: 20px;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.titulo {
+    margin: 0 0 15px 0;
+    font-size: 1.5em;
+    color: #00ffff;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.estado-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.parametros {
+    display: grid;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.parametro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+.label {
+    color: #888;
+    font-size: 0.9em;
+}
+
+.valor {
+    color: #00ffff;
+    font-weight: bold;
+}
+
+.estado-info {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 15px;
+}
+
+.estado1-info, .estado2-info {
+    margin-bottom: 15px;
+}
+
+.estado1-info h3, .estado2-info h3 {
+    color: #00ffff;
+    margin: 0 0 10px 0;
+    font-size: 1em;
+}
+
+.subestados {
+    display: grid;
+    gap: 5px;
+}
+
+.subestado {
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+}
+
+.subestado.active {
+    background: rgba(0, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* Estado específico estilos */
+[data-estado="2"] .estado2-info {
+    display: block;
+}
+
+[data-estado="1"] .estado2-info {
+    opacity: 0.5;
+}
+
+/* Animaciones */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.subestado.active {
+    animation: pulse 2s infinite;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .info-panel {
+        width: 100%;
+        top: auto;
+        bottom: 0;
+        right: 0;
+        border-radius: 15px 15px 0 0;
+    }
+}
