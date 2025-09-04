@@ -1,0 +1,152 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background: black;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+canvas {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#controls {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    z-index: 2;
+    min-width: 250px;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+    border: 1px solid rgba(0, 255, 0, 0.3);
+}
+
+.estado-selector {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(0, 255, 0, 0.3);
+}
+
+.estado-indicator {
+    font-size: 18px;
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    background: rgba(0, 255, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.estado-description {
+    font-size: 14px;
+    color: #aaa;
+    text-align: center;
+}
+
+.mouse-data {
+    margin: 15px 0;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+}
+
+.mouse-data div {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.control-panel {
+    display: none;
+    margin-top: 15px;
+    padding: 15px;
+    background: rgba(0, 255, 0, 0.05);
+    border-radius: 8px;
+}
+
+/* Estado 1 específico */
+body[data-estado="1"] #estado1Controls {
+    display: block;
+}
+
+.clock-value, .scale-value {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+/* Estado 2 específico */
+body[data-estado="2"] #estado2Controls {
+    display: block;
+}
+
+.volume-control {
+    margin-top: 15px;
+}
+
+.volume-control label {
+    display: block;
+    margin-bottom: 8px;
+    color: #0f0;
+}
+
+.volume-control input[type="range"] {
+    width: 100%;
+    margin: 10px 0;
+    -webkit-appearance: none;
+    background: rgba(0, 255, 0, 0.2);
+    height: 6px;
+    border-radius: 3px;
+}
+
+.volume-control input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    background: #0f0;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+.volume-visualization {
+    margin-top: 15px;
+    height: 100px;
+    border: 1px solid rgba(0, 255, 0, 0.3);
+    border-radius: 8px;
+    background: rgba(0, 255, 0, 0.05);
+}
+
+/* Estado 3 específico */
+body[data-estado="3"] #estado3Controls {
+    display: block;
+}
+
+.word-container {
+    text-align: center;
+}
+
+.last-word {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #0f0;
+}
+
+.word-timer {
+    font-size: 14px;
+    color: #aaa;
+}
+
+/* Animaciones */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.estado-indicator {
+    animation: pulse 2s infinite;
+}

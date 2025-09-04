@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Desktop Control</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+</head>
+<body>
+    <div id="controls">
+        <div class="estado-selector">
+            <div class="estado-indicator">Estado: <span id="estadoActual">1</span></div>
+            <div class="estado-description" id="estadoDescription"></div>
+        </div>
+
+        <div class="mouse-data">
+            <div>Mouse X: <span id="mouseX">0.00</span></div>
+            <div>Mouse Y: <span id="mouseY">0.00</span></div>
+        </div>
+
+        <div class="state-specific-controls">
+            <!-- Estado 1 controls -->
+            <div class="control-panel" id="estado1Controls">
+                <div class="clock-value">Clock: <span id="clockValue">0.00</span></div>
+                <div class="scale-value">Scale: <span id="scaleValue">1.00</span></div>
+            </div>
+
+            <!-- Estado 2 controls -->
+            <div class="control-panel" id="estado2Controls">
+                <div class="volume-control">
+                    <label for="volumeSlider">Volume Control</label>
+                    <input type="range" id="volumeSlider" min="0" max="100" value="50">
+                    <div>Volume: <span id="volumeLevel">0.50</span></div>
+                </div>
+                <div class="volume-visualization" id="volumeVis"></div>
+            </div>
+
+            <!-- Estado 3 controls -->
+            <div class="control-panel" id="estado3Controls">
+                <div class="word-container">
+                    <div class="last-word">Última palabra: <span id="lastWord">-</span></div>
+                    <div class="word-timer">Próxima palabra en: <span id="wordTimer">0</span>s</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="sketch.js"></script>
+</body>
+</html>

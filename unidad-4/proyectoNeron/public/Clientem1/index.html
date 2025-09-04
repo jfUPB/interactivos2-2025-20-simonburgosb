@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Móvil 1</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+</head>
+<body>
+    <!-- Estado 1 -->
+    <div class="contenedor estado1">
+        <h1>Control Manual</h1>
+        <div id="controlsEstado1">
+            <div class="slider-container">
+                <label>Intensidad</label>
+                <input type="range" id="intensidad" min="0" max="100" value="50">
+                <div class="slider-value">
+                    <span id="valorIntensidad">50</span>
+                </div>
+            </div>
+
+            <div class="slider-container">
+                <label>Velocidad</label>
+                <input type="range" id="velocidad" min="0" max="10" value="5">
+                <div class="slider-value">
+                    <span id="valorVelocidad">5</span>
+                </div>
+            </div>
+
+            <button id="enviar">Enviar datos</button>
+            <div class="last-sent">
+                <span>Último envío: </span>
+                <span id="lastSentTime">-</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Estado 2 -->
+    <div class="contenedor estado2">
+        <h1>Detección de Impactos</h1>
+        <div id="impactDisplay">
+            <div class="impact-circle"></div>
+            <div class="impact-value">
+                <span id="currentImpact">0.0</span>
+                <span class="unit">G</span>
+            </div>
+        </div>
+        <div class="sensor-data">
+            <div class="acceleration-data">
+                <div class="sensor-value">
+                    <span class="label">X:</span>
+                    <span id="accelX">0.0</span>
+                    <span class="unit">m/s²</span>
+                </div>
+                <div class="sensor-value">
+                    <span class="label">Y:</span>
+                    <span id="accelY">0.0</span>
+                    <span class="unit">m/s²</span>
+                </div>
+                <div class="sensor-value">
+                    <span class="label">Z:</span>
+                    <span id="accelZ">0.0</span>
+                    <span class="unit">m/s²</span>
+                </div>
+            </div>
+            <div class="impact-threshold">
+                <div class="threshold-bar">
+                    <div class="threshold-indicator" id="impactIndicator"></div>
+                </div>
+                <div class="threshold-value">
+                    Umbral: <span id="impactThreshold">15.0</span>
+                    <span class="unit">G</span>
+                </div>
+                <div class="last-impact">
+                    Último impacto: <span id="lastImpactTime">-</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Estado 3 -->
+    <div class="contenedor estado3">
+        <h1>Detección de Movimientos</h1>
+        <div id="movementDisplay">
+            <div class="movement-circle"></div>
+            <div class="movement-value">
+                <span id="currentMovement">0.0</span>
+                <span class="unit">m/s²</span>
+            </div>
+        </div>
+        <div class="sensor-data">
+            <div class="movement-data">
+                <div class="sensor-value">
+                    <span class="label">X:</span>
+                    <span id="movX">0.0</span>
+                    <span class="unit">m/s²</span>
+                </div>
+                <div class="sensor-value">
+                    <span class="label">Y:</span>
+                    <span id="movY">0.0</span>
+                    <span class="unit">m/s²</span>
+                </div>
+                <div class="sensor-value">
+                    <span class="label">Z:</span>
+                    <span id="movZ">0.0</span>
+                    <span class="unit">m/s²</span>
+                </div>
+            </div>
+            <div class="movement-history">
+                <canvas id="movementGraph"></canvas>
+            </div>
+            <div class="threshold-value">
+                Umbral: <span id="movementThreshold">5.0</span>
+                <span class="unit">m/s²</span>
+            </div>
+            <div class="last-movement">
+                Último movimiento: <span id="lastMovementTime">-</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="estado-indicator">
+        <span class="estado-label">Estado:</span>
+        <span id="estadoActual">1</span>
+    </div>
+
+    <div id="permissionStatus" class="permission-status">
+        <span class="status-icon">⚠️</span>
+        <span class="status-text">Esperando permisos...</span>
+    </div>
+
+    <script src="sketch.js"></script>
+</body>
+</html>
