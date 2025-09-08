@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Visuales Interactivas</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+</head>
+<body>
+  <div class="info-panel">
+    <h1 class="titulo">Visuales - Estado Global <span id="estadoGlobal">1</span></h1>
+    <div class="estado-container">
+      <div class="estado-actual">
+        <span class="label">Subestado:</span>
+        <span id="nombreSubEstado" class="valor">Penumbra</span>
+      </div>
+    </div>
+
+    <div class="parametros">
+      <div class="parametro">
+        <span class="label">Intensidad:</span>
+        <span id="valorIntensidad" class="valor">50</span>
+      </div>
+      <div class="parametro">
+        <span class="label">Brillo:</span>
+        <span id="valorBrillo" class="valor">100</span>
+      </div>
+      <div class="parametro">
+        <span class="label">Velocidad:</span>
+        <span id="valorVelocidad" class="valor">1.0</span>
+      </div>
+    </div>
+
+    <div class="estado-info">
+      <div class="estado1-info">
+        <h3>Estado 1: Umbral</h3>
+        <div class="subestados">
+          <div class="subestado" data-estado="1">Penumbra</div>
+          <div class="subestado" data-estado="2">Aparición</div>
+          <div class="subestado" data-estado="3">Cruce</div>
+        </div>
+      </div>
+      <div class="estado2-info">
+        <h3>Estado 2: Transformación</h3>
+        <div class="subestados">
+          <div class="subestado" data-estado="1">Intensificación</div>
+          <div class="subestado" data-estado="2">Sendero</div>
+          <div class="subestado" data-estado="3">Fusión</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="sketch.js"></script>
+</body>
+</html>
