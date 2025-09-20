@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Visuales Interactivas - Corazón</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.js"></script>
+</head>
+<body>
+  <div class="info-panel">
+    <h1 class="titulo">Corazón Pulsante</h1>
+    
+    <div class="parametros">
+      <div class="parametro">
+        <span class="label">Tamaño (Mobile 1):</span>
+        <span id="valorIntensidad" class="valor">50</span>
+      </div>
+      <div class="parametro">
+        <span class="label">Velocidad (Mobile 1):</span>
+        <span id="valorVelocidad" class="valor">1.0</span>
+      </div>
+      <div class="parametro">
+        <span class="label">Brillo (Mobile 2):</span>
+        <span id="nivelMicrofono" class="valor">0.0</span>
+      </div>
+      <div class="parametro">
+        <span class="label">Rotación (Desktop X):</span>
+        <span id="mouseX" class="valor">0.0</span>
+      </div>
+      <div class="parametro">
+        <span class="label">Escala Aura (Desktop Y):</span>
+        <span id="mouseY" class="valor">0.0</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="sketch.js"></script>
+</body>
+</html>
