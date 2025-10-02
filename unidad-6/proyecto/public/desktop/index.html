@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Desktop Control</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+</head>
+<body>
+    <div id="controls">
+        <div class="estado-selector">
+            <div class="estado-indicator">Estado: <span id="estadoActual">1</span></div>
+        </div>
+
+        <!-- Control del Estado 1 -->
+        <div id="estado1Controls" class="estado-controls">
+            <div class="mouse-data">
+                <div>Mouse X: <span id="mouseX">0.00</span></div>
+                <div>Mouse Y: <span id="mouseY">0.00</span></div>
+            </div>
+        </div>
+
+        <!-- Control del Estado 2 -->
+        <div id="estado2Controls" class="estado-controls">
+            <div class="key-data">
+                <div class="last-key-container">
+                    <div class="key-label">Última Tecla:</div>
+                    <div id="lastKey" class="key-display">-</div>
+                </div>
+                <div class="key-info">
+                    <div>Código: <span id="keyCode">-</span></div>
+                    <div>Tiempo: <span id="keyTime">-</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="sketch.js"></script>
+</body>
+</html>

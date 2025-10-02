@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background: black;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+canvas {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#controls {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+    z-index: 2;
+}
+
+.estado-selector {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(0, 255, 0, 0.2);
+}
+
+.estado-indicator {
+    font-size: 16px;
+    color: #0f0;
+}
+
+/* Control de Estados */
+.estado-controls {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Estado 1 */
+body[data-estado="1"] #estado1Controls {
+    display: block;
+    opacity: 1;
+}
+
+.mouse-data {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.mouse-data div {
+    margin: 8px 0;
+    color: #0f0;
+}
+
+/* Estado 2 */
+body[data-estado="2"] #estado2Controls {
+    display: block;
+    opacity: 1;
+}
+
+.key-data {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.last-key-container {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.key-label {
+    font-size: 14px;
+    color: #0f0;
+    margin-bottom: 8px;
+}
+
+.key-display {
+    font-size: 32px;
+    font-weight: bold;
+    color: #fff;
+    background: rgba(0, 255, 0, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 255, 0, 0.3);
+    margin: 10px 0;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.key-info {
+    display: grid;
+    gap: 8px;
+    font-size: 14px;
+    color: #aaa;
+}
+
+.key-info div {
+    padding: 5px 10px;
+    background: rgba(0, 255, 0, 0.05);
+    border-radius: 5px;
+}
+
+/* Animaciones */
+@keyframes keyPress {
+    0% { 
+        transform: scale(1.1);
+        background: rgba(0, 255, 0, 0.3);
+        border-color: rgba(0, 255, 0, 0.6);
+    }
+    100% { 
+        transform: scale(1);
+        background: rgba(0, 255, 0, 0.1);
+        border-color: rgba(0, 255, 0, 0.3);
+    }
+}
+
+.key-press-animation {
+    animation: keyPress 0.3s ease-out;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #controls {
+        top: auto;
+        bottom: 20px;
+        right: 50%;
+        transform: translateX(50%);
+        width: 90%;
+        max-width: 400px;
+    }
+}

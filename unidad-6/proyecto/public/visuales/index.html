@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Visuales Interactivas - Corazón</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.js"></script>
+</head>
+<body>
+    <div class="info-panel" data-estado="1">
+        <!-- Estado 1 -->
+        <div id="estado1Info" class="estado-info">
+            <h1 class="titulo">Corazón Pulsante</h1>
+            <div class="parametros">
+                <div class="parametro">
+                    <span class="label">Tamaño (Mobile 1):</span>
+                    <span id="valorIntensidad" class="valor">50</span>
+                </div>
+                <div class="parametro">
+                    <span class="label">Velocidad (Mobile 1):</span>
+                    <span id="valorVelocidad" class="valor">1.0</span>
+                </div>
+                <div class="parametro">
+                    <span class="label">Brillo (Mobile 2):</span>
+                    <span id="nivelMicrofono" class="valor">0.0</span>
+                </div>
+                <div class="parametro">
+                    <span class="label">Rotación (Desktop X):</span>
+                    <span id="mouseX" class="valor">0.0</span>
+                </div>
+                <div class="parametro">
+                    <span class="label">Escala Aura (Desktop Y):</span>
+                    <span id="mouseY" class="valor">0.0</span>
+                </div>
+                <div class="parametro">
+                    <span class="label">Partículas:</span>
+                    <span id="numParticulas" class="valor">0</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Estado 2 -->
+        <div id="estado2Info" class="estado-info">
+            <h1 class="titulo">Corazón Agrietado</h1>
+            <div class="parametros">
+                <div class="parametro">
+                    <span class="label">Grietas Activas:</span>
+                    <span id="numGrietas" class="valor">0</span>
+                </div>
+                <div class="parametro">
+                    <span class="label">Grietas en Periodo:</span>
+                    <span id="grietasPeriodo" class="valor">0/10</span>
+                </div>
+                <div class="parametro">
+                    <span class="label">Amplitud (Mobile 2):</span>
+                    <span id="amplitudGrietas" class="valor">50</span>
+                </div>
+                <div class="parametro">
+                    <span class="label">Dirección (Mobile 1):</span>
+                    <span id="direccionGrietas" class="valor">0°</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="sketch.js"></script>
+</body>
+</html>
