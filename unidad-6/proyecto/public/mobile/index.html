@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Móvil 1</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+</head>
+<body>
+    <!-- Estado 1: Control Manual -->
+    <div id="estado1Controls" class="contenedor estado-controls">
+        <h1>Control Manual</h1>
+        <div id="controls">
+            <div class="slider-container">
+                <label>Intensidad</label>
+                <input type="range" id="intensidad" min="0" max="100" value="50">
+                <div class="slider-value">
+                    <span id="valorIntensidad">50</span>
+                </div>
+            </div>
+
+            <div class="slider-container">
+                <label>Velocidad</label>
+                <input type="range" id="velocidad" min="0" max="10" value="5">
+                <div class="slider-value">
+                    <span id="valorVelocidad">5</span>
+                </div>
+            </div>
+
+            <button id="enviar">Enviar datos</button>
+            <div class="last-sent">
+                <span>Último envío: </span>
+                <span id="lastSentTime">-</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Estado 2: Control de Impactos -->
+    <div id="estado2Controls" class="contenedor estado-controls">
+        <h1>Control de Impactos</h1>
+        <div class="impact-container">
+            <div id="impactFeedback" class="impact-circle">
+                <span>¡GOLPEA!</span>
+            </div>
+            <div class="impact-info">
+                <div>Fuerza: <span id="impactForce">0</span></div>
+                <div>Último impacto: <span id="lastImpactTime">-</span></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="estado-indicator">
+        <span class="estado-label">Estado:</span>
+        <span id="estadoActual">1</span>
+    </div>
+
+    <script src="sketch.js"></script>
+</body>
+</html>

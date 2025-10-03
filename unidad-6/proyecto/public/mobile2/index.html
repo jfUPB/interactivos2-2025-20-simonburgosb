@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Móvil 2 - Audio Control</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.min.js"></script>
+</head>
+<body>
+    <!-- Estado 1: Micrófono -->
+    <div id="estado1Controls" class="contenedor estado-controls">
+        <h1>Control de Micrófono</h1>
+        <div id="mic-info">
+            <div>Nivel: <span id="micLevel">0</span></div>
+            <div>Último envío: <span id="lastSentTime">-</span></div>
+        </div>
+    </div>
+
+    <!-- Estado 2: Control de Amplitud -->
+    <div id="estado2Controls" class="contenedor estado-controls">
+        <h1>Control de Amplitud</h1>
+        <div class="slider-container">
+            <label>Amplitud</label>
+            <input type="range" id="amplitudSlider" min="0" max="100" value="50">
+            <div class="slider-value">
+                <span id="valorAmplitud">50</span>
+            </div>
+        </div>
+        <div class="last-sent">
+            <span>Último envío: </span>
+            <span id="lastAmplitudTime">-</span>
+        </div>
+    </div>
+
+    <div class="estado-indicator">
+        <span class="estado-label">Estado:</span>
+        <span id="estadoActual">1</span>
+    </div>
+
+    <script src="sketch.js"></script>
+</body>
+</html>

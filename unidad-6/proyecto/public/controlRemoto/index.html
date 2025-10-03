@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Control Remoto</title>
+  <link rel="stylesheet" href="control-remoto.css">
+</head>
+<body>
+  <h1>Control Remoto</h1>
+
+  <div class="panel">
+    <h2>Estados Globales</h2>
+    <button onclick="setGlobalState(1)">Estado Global 1</button>
+    <button onclick="setGlobalState(2)">Estado Global 2</button>
+    <button onclick="setGlobalState(3)">Estado Global 3</button>
+  </div>
+
+  <div class="panel">
+    <h2>Subestados (del Estado 1)</h2>
+    <button onclick="setSubState(1)">Penumbra inicial</button>
+    <button onclick="setSubState(2)">Aparición espectral</button>
+    <button onclick="setSubState(3)">Cruce del umbral</button>
+  </div>
+  <div class="panel">
+    <h2>Subestados (del Estado 2)</h2>
+    <button onclick="setSubState(1)">Intesificacion</button>
+    <button onclick="setSubState(2)">Sendero</button>
+    <button onclick="setSubState(3)">Fusion</button>
+  </div>
+  <div class="panel">
+    <h2>Subestados (del Estado 3)</h2>
+    <button onclick="setSubState(1)">Renacimiento</button>
+    <button onclick="setSubState(2)">Euforia</button>
+    <button onclick="setSubState(3)">Trascendencia</button>
+  <div class="panel">
+    <h2>Parámetros Visuales</h2>
+    <label>Brillo</label>
+    <input type="range" min="0" max="100" value="50" id="brillo" oninput="updateParam('brillo', this.value)">
+    <label>Velocidad</label>
+    <input type="range" min="0" max="10" value="5" id="velocidad" oninput="updateParam('velocidad', this.value)">
+    <label>Intensidad</label>
+    <input type="range" min="0" max="10" value="5" id="intensidad" oninput="updateParam('intensidad', this.value)">
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="sketch.js"></script>
+</body>
+</html>
