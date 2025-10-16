@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+canvas {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#controls {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 250px;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.estado-indicator {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px 20px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+/* Control de Estados */
+.estado-controls {
+    display: none;
+}
+
+/* Estado 1: Mouse */
+.mouse-data div {
+    padding: 8px;
+    background: rgba(255, 100, 255, 0.1);
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+/* Estado 2: Teclado */
+.key-data {
+    padding: 10px;
+    background: rgba(255, 255, 0, 0.1);
+    border-radius: 8px;
+}
+
+.key-display {
+    font-size: 24px;
+    text-align: center;
+    padding: 15px;
+    margin: 10px 0;
+    background: rgba(255, 255, 0, 0.2);
+    border-radius: 5px;
+}
+
+.key-info div {
+    padding: 5px;
+    margin-top: 5px;
+    background: rgba(255, 255, 0, 0.1);
+    border-radius: 3px;
+}
+
+/* Estado 3: Palabras */
+.palabras-data {
+    padding: 10px;
+    background: rgba(0, 255, 0, 0.1);
+    border-radius: 8px;
+}
+
+.palabra-display {
+    font-size: 24px;
+    text-align: center;
+    padding: 15px;
+    margin: 10px 0;
+    background: rgba(0, 255, 0, 0.2);
+    border-radius: 5px;
+}
+
+.palabra-info div {
+    padding: 5px;
+    margin-top: 5px;
+    background: rgba(0, 255, 0, 0.1);
+    border-radius: 3px;
+}
+
+/* Animaciones */
+@keyframes keyPress {
+    0% { transform: scale(0.95); opacity: 0.5; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.key-nueva {
+    animation: keyPress 0.3s ease-out;
+}
+
+@keyframes palabraShow {
+    0% { transform: scale(0.95); opacity: 0.5; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.palabra-nueva {
+    animation: palabraShow 0.3s ease-out;
+}
+
+/* Estado activo */
+body[data-estado="1"] #estado1Controls,
+body[data-estado="2"] #estado2Controls,
+body[data-estado="3"] #estado3Controls {
+    display: block;
+}

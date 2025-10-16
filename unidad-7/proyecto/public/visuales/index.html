@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Visuales Interactivas</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.js"></script>
+</head>
+<body>
+    <div class="info-panel" data-estado="1">
+        <!-- Estado 1: Corazón Pulsante -->
+        <div id="estado1Info" class="estado-info">
+            <h1 class="titulo">Corazón Pulsante</h1>
+            <div class="parametros">
+                <div class="parametro" style="--index: 0">
+                    <span class="label">Intensidad:</span>
+                    <span id="valorIntensidad" class="valor">50</span>
+                </div>
+                <div class="parametro" style="--index: 1">
+                    <span class="label">Velocidad:</span>
+                    <span id="valorVelocidad" class="valor">1</span>
+                </div>
+                <div class="parametro" style="--index: 2">
+                    <span class="label">Nivel Micrófono:</span>
+                    <span id="valorMicrofono" class="valor">0.00</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Estado 2: Corazón Fragmentado -->
+        <div id="estado2Info" class="estado-info">
+            <h1 class="titulo">Corazón Fragmentado</h1>
+            <div class="parametros">
+                <div class="parametro" style="--index: 0">
+                    <span class="label">Grietas Activas:</span>
+                    <span id="numGrietas" class="valor">0</span>
+                </div>
+                <div class="parametro" style="--index: 1">
+                    <span class="label">Amplitud:</span>
+                    <span id="valorAmplitud" class="valor">50</span>
+                </div>
+                <div class="parametro" style="--index: 2">
+                    <span class="label">Dirección:</span>
+                    <span id="valorDireccion" class="valor">0°</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Estado 3: Lluvia de Partículas -->
+        <div id="estado3Info" class="estado-info">
+            <h1 class="titulo">Lluvia de Partículas</h1>
+            <div class="parametros">
+                <div class="parametro" style="--index: 0">
+                    <span class="label">Partículas Activas:</span>
+                    <span id="numParticulasActivas" class="valor">0</span>
+                </div>
+                <div class="parametro" style="--index: 1">
+                    <span class="label">Transparencia:</span>
+                    <span id="valorAlpha" class="valor">127</span>
+                </div>
+                <div class="parametro" style="--index: 2">
+                    <span class="label">Dirección:</span>
+                    <span id="direccionParticulas" class="valor">90°</span>
+                </div>
+                <div class="parametro" style="--index: 3">
+                    <span class="label">Tamaño:</span>
+                    <span id="tamanoParticulas" class="valor">10</span>
+                </div>
+                <div class="parametro" style="--index: 4">
+                    <span class="label">Última Palabra:</span>
+                    <span id="ultimaPalabra" class="valor">-</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="debug"></div>
+    <script src="sketch.js"></script>
+</body>
+</html>
