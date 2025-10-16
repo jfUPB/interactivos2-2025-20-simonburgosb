@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Móvil 2 - Control</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.min.js"></script>
+</head>
+<body>
+    <!-- Estado 1: Control de Micrófono -->
+    <div id="estado1Controls" class="contenedor">
+        <h1>Control de Micrófono</h1>
+        <div id="mic-info">
+            <div class="nivel-actual">Nivel: <span id="nivelMicrofono">0.00</span></div>
+            <div class="ultimo-envio">Último envío: <span id="lastSentTime">-</span></div>
+        </div>
+    </div>
+
+    <!-- Estado 2: Control de Amplitud -->
+    <div id="estado2Controls" class="contenedor">
+        <h1>Control de Amplitud</h1>
+        <div class="slider-container">
+            <label>Amplitud</label>
+            <input type="range" id="amplitudSlider" min="0" max="100" value="50">
+            <div class="slider-value">
+                <span id="valorAmplitud">50</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Estado 3: Control de Alpha -->
+    <div id="estado3Controls" class="contenedor">
+        <h1>Control de Alpha</h1>
+        <div class="slider-container">
+            <label>Transparencia</label>
+            <input type="range" id="alphaSlider" min="0" max="255" value="127">
+            <div class="slider-value">
+                <span id="valorAlpha">127</span>
+            </div>
+        </div>
+        <div class="last-sent">
+            <span>Último envío: </span>
+            <span id="lastAlphaTime">-</span>
+        </div>
+    </div>
+
+    <div class="estado-indicator">
+        <span class="estado-label">Estado:</span>
+        <span id="estadoActual">1</span>
+    </div>
+
+    <script src="sketch.js"></script>
+</body>
+</html>

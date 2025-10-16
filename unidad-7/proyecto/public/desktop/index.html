@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Desktop Control</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+</head>
+<body>
+    <div id="controls">
+        <!-- Estado 1: Mouse -->
+        <div id="estado1Controls" class="estado-controls">
+            <div class="mouse-data">
+                <div>Posición X: <span id="mouseX">0.00</span></div>
+                <div>Posición Y: <span id="mouseY">0.00</span></div>
+                <div>Último envío: <span id="lastSentTime">-</span></div>
+            </div>
+        </div>
+
+        <!-- Estado 2: Teclado -->
+        <div id="estado2Controls" class="estado-controls">
+            <div class="key-data">
+                <div class="last-key-container">
+                    <div class="key-label">Última Tecla:</div>
+                    <div id="lastKey" class="key-display">-</div>
+                </div>
+                <div class="key-info">
+                    <div>Código: <span id="keyCode">-</span></div>
+                    <div>Tiempo: <span id="keyTime">-</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Estado 3: Palabras -->
+        <div id="estado3Controls" class="estado-controls">
+            <div class="palabras-data">
+                <div class="palabra-container">
+                    <div class="palabra-label">Última Palabra:</div>
+                    <div id="lastPalabra" class="palabra-display">-</div>
+                </div>
+                <div class="palabra-info">
+                    <div>Posición: <span id="palabraPos">-</span></div>
+                    <div>Tiempo: <span id="palabraTime">-</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="estado-indicator">
+        <span class="estado-label">Estado:</span>
+        <span id="estadoActual">1</span>
+    </div>
+
+    <script src="sketch.js"></script>
+</body>
+</html>
